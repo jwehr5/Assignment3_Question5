@@ -1,5 +1,12 @@
+/*
+Jayden Wehr
+main.cpp
+
+*/
+
 #include<iostream>
 #include<map>
+#include<string>
 #include "functions.h"
 using namespace std;
 
@@ -21,14 +28,18 @@ int main() {
 	//Changing the capital of California to Los Angeles
 	stateDataMap["California"] = "Los Angeles";
 
-	//Testing method outputCapitalName
-	cout << "Calling outputCapitalName with Nebraska... ";
-	outputCapitalName(stateDataMap, "Nebraska");
-	cout << "[Should be Lincoln]" << endl;
+	cout << endl;
 
-	cout << "Calling outputCapitalName with Texas... ";
-	outputCapitalName(stateDataMap, "Texas");
-	cout << "[Should be Austin]" << endl;
+	//Testing method outputCapitalName
+
+	//Get user input
+	string userStateName;
+	cout << "Enter a state name: ";
+	getline(cin, userStateName);
+
+	cout << "The capital of " << userStateName << " is: ";
+	outputCapitalName(stateDataMap, userStateName);
+
 
 	return 0;
 }
